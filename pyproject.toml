@@ -1,0 +1,25 @@
+[project]
+name = "module-uv"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "rustam", email = "rustamaxm@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.1.3",
+    "poethepoet>=0.29.0",
+    "pyserial>=3.5",
+    "pytest>=8.3.3",
+]
+
+[tool.poe.tasks]
+hi.shell = "echo 'Hi from poethepoet'"
+
+[project.scripts]
+hi = "module_uv.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
